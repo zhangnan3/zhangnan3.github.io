@@ -30,21 +30,51 @@
 * npm -v
 * 如果是 windows 机器的话，直接到 node 官网下载对应版本的软件，双击安装即可。
 
-设置默认 node 版本
-利用 nvm 可以在我们的机器上安装多个版本 node ，并且可以进行灵活的切换。下面将 5.10.1 这个 node 版本设置为默认。执行下面语句即可。重启 shell 之后，执行 node -v 可以查看当前的 node 版本。
+* 设置默认 node 版本
+* 利用 nvm 可以在我们的机器上安装多个版本 node ，并且可以进行灵活的切换。下面将 5.10.1 这个 node 版     本设置为默认。执行下面语句即可。重启 shell 之后，执行 node -v 可以查看当前的 node 版本。
 
-nvm alias default 5.10.1
-配置 npm
-npm 是一个非常强大的包管理工具，可以让我们非常方便的安装、卸载、更新插件包，但是默认的 npm 下载包是从国外的服务器获取，速度很不给力，这里推荐使用淘宝镜像。
+* nvm alias default 5.10.1
+* 配置 npm
+* npm 是一个非常强大的包管理工具，可以让我们非常方便的安装、卸载、更新插件包，但是默认的 npm 下载包是从国外的服务器获取，速度很不给力，这里推荐使用淘宝镜像。
 
-到淘宝相关页面。可以看到有多种使用方式。这里推荐执行下面的命令，即使用淘宝定制的 cnpm 。
+* 到淘宝相关页面。可以看到有多种使用方式。这里推荐执行下面的命令，即使用淘宝定制的 cnpm 。
 
-npm install -g cnpm --registry=https://registry.npm.taobao.org
+* npm install -g cnpm --registry=https://registry.npm.taobao.org
 好，之后我们就可以用 cnpm 这个命令了。
 
-检查下装好了吗
-cnpm -v
-之后装包的话可以直接
-cnpm install gulp
+* 检查下装好了吗
+* cnpm -v
+* 之后装包的话可以直接
+* cnpm install gulp
 
 *******************************
+###   npm的使用方法
+
+* npm  init（项目包package.json）
+
+* npm i jquery --save(装非工具包   例：jquery)
+
+* npm uninstall  jquery    卸载包
+
+* npm i jquery@1 --save （装新的jq版本）
+
+* npm  i  webpack --save -dev   装工具的包压缩版
+
+* npm i （下载所以包）
+
+* 仓库下创建 gitignore
+
+* 全局下安装  ：     npm install gulp -g
+
+* 可以使用一下命令来查看所有全局安装的模块：    npm ls -g
+
+
+***********
+
+###  执行node
+
+####   从npm中拿到下载的jquery包（第三方模块/ 核心模块)
+
+
+* var $=require ('./node_modules/jquery')
+* var 
